@@ -10,7 +10,7 @@ public class Mascarilla extends Actor
 {
     private Actor jugador;
     private int tiempoAnimacion = 0;
-    static GreenfootSound powerup = new GreenfootSound("powerup2.mp3");
+    static GreenfootSound powerup = new GreenfootSound("powerup2.wav");
     /**
      * Act - do whatever the Mascarilla wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -33,7 +33,7 @@ public class Mascarilla extends Actor
             escenario.sumarVida();
             World world;
             world = getWorld();
-            powerup.setVolume(20);
+            powerup.setVolume(70);
             powerup.play();
             world.removeObject(this);
             return;

@@ -16,8 +16,8 @@ public class Escenario extends World
     private GreenfootImage ceroVidas = new GreenfootImage("0lives.png");
     private Inicio inicio;
     private Logo logo;
-    static GreenfootSound bg = new GreenfootSound("bgmusic.mp3");
-    static GreenfootSound juegoAcabado = new GreenfootSound("gameover.mp3");
+    static GreenfootSound bg = new GreenfootSound("bgmusic.wav");
+    static GreenfootSound juegoAcabado = new GreenfootSound("gameover.wav");
     static GreenfootSound hit = new GreenfootSound("hit.wav");
     
     /**

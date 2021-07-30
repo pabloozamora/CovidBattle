@@ -50,7 +50,7 @@ public class Jugador extends Actor
             escenario.nuevoVirus();
             tiempoNuevoVirus = 200;
         }
-        nuevoExtra = Greenfoot.getRandomNumber(10000);
+        nuevoExtra = Greenfoot.getRandomNumber(5000);
         if(nuevoExtra == 5){
             Escenario escenario = (Escenario) getWorld();
             escenario.aparecerMascarilla();
@@ -58,7 +58,7 @@ public class Jugador extends Actor
         }
         else if (nuevoExtra == 10){
             Escenario escenario = (Escenario) getWorld();
-            escenario.aparecerMascarilla();
+            escenario.aparecerAlcohol();
             nuevoExtra = 0;
         }
         
