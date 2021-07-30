@@ -16,7 +16,10 @@ public class Escenario extends World
     private GreenfootImage ceroVidas = new GreenfootImage("0lives.png");
     private Inicio inicio;
     private Logo logo;
-
+    static GreenfootSound bg = new GreenfootSound("bgmusic.mp3");
+    static GreenfootSound juegoAcabado = new GreenfootSound("gameover.mp3");
+    static GreenfootSound hit = new GreenfootSound("hit.wav");
+    
     /**
      * Constructor for objects of class MyWorld.
      * 
@@ -44,6 +47,8 @@ public class Escenario extends World
         addObject(contador,87,56);
         Vidas vidas = new Vidas();
         addObject(vidas,53,17);
+        bg.setVolume(20);
+        bg.playLoop();
     }
     
     public Contador getContador()
@@ -65,9 +70,14 @@ public class Escenario extends World
     
     public void quitarVida()
     {
+        hit.setVolume(70);
+        hit.play();
         contadorVidas -= 1;
         if (contadorVidas == 0){
             gameover = new Gameover();
+            bg.stop();
+            juegoAcabado.play();
+            juegoAcabado.setVolume(30);
             addObject(gameover,300,200);
             contador.juegoTerminado();
             contador.setLocation(300,300);

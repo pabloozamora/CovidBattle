@@ -10,6 +10,7 @@ public class Alcohol extends Actor
 {
     private Actor jugador;
     private int tiempoAnimacion = 0;
+    static GreenfootSound powerup = new GreenfootSound("powerup.wav");
     
     public Alcohol(){
         GreenfootImage imagenAlcohol = new GreenfootImage("alcohol.png");
@@ -41,6 +42,8 @@ public class Alcohol extends Actor
             contador.sumarPuntos(5);
             World world;
             world = getWorld();
+            powerup.setVolume(70);
+            powerup.play();
             world.removeObject(this);
             return;
         }

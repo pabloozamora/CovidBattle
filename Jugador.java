@@ -18,7 +18,6 @@ public class Jugador extends Actor
     private int direccion;
     private int tiempoEspera = 0;
     private int tiempoNuevoVirus = 0;
-    //private int tiempoNuevaMascarilla = 0;
     private int nuevoExtra;
     int nuevaAltura = frente.getHeight()/5;
     int nuevoAncho = frente.getWidth()/5;

@@ -11,6 +11,7 @@ public class Gameover extends Actor
     private GreenfootImage juegoterminado = new GreenfootImage("gameover.png");
     public Gameover (){
         setImage(juegoterminado);
+        
     }
     /**
      * Act - do whatever the Gameover wants to do. This method is called whenever

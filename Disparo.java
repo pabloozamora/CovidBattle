@@ -10,6 +10,7 @@ public class Disparo extends Actor
 {
     private int velocidad = 6;
     private Actor virus;
+    static GreenfootSound lanzar = new GreenfootSound("throw.wav");
     /**
      * Act - do whatever the Disparo wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -21,6 +22,8 @@ public class Disparo extends Actor
         int nuevoAncho = imagenDisparo.getWidth()/5;
         imagenDisparo.scale(nuevaAltura, nuevoAncho);
         setImage(imagenDisparo);
+        lanzar.setVolume(70);
+        lanzar.play();
     }
     
     public void act(){

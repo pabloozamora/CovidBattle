@@ -9,6 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Contador extends Actor
 {
     private int puntaje = 0;
+    static GreenfootSound pop = new GreenfootSound("point.wav");
     
     public Contador()
     {
@@ -21,6 +22,8 @@ public class Contador extends Actor
     public void sumarPuntos(int puntos)
     {
         puntaje += puntos;
+        pop.setVolume(70);
+        pop.play();
         setImage(new GreenfootImage("" + puntaje, 20, Color.WHITE,null));
     }
     
