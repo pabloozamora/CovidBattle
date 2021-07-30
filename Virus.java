@@ -24,7 +24,7 @@ public class Virus extends Actor
      */
     public void act()
     {  
-        jugador = getOneIntersectingObject(Jugador.class);
+        jugador = getOneObjectAtOffset(0,0,Jugador.class);
         moverse();
         if (jugador != null)
         {

@@ -14,6 +14,8 @@ public class Escenario extends World
     private int contadorVidas = 3;
     private Gameover gameover;
     private GreenfootImage ceroVidas = new GreenfootImage("0lives.png");
+    private Inicio inicio;
+    private Logo logo;
 
     /**
      * Constructor for objects of class MyWorld.
@@ -23,8 +25,19 @@ public class Escenario extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1); 
+        GreenfootImage fondo = new GreenfootImage("bginicio.jpg");
+        setBackground(fondo);
+        logo = new Logo();
+        addObject(logo, 308, 143);
+        inicio = new Inicio();
+        addObject(inicio, 300, 300);
+    }
+    
+    public void empezarJuego(){
         GreenfootImage fondo = new GreenfootImage("bg.png");
         setBackground(fondo);
+        removeObject(inicio);
+        removeObject(logo);
         jugador = new Jugador();
         addObject(jugador,45,347);
         contador = new Contador();

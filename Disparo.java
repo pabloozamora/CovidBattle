@@ -26,7 +26,7 @@ public class Disparo extends Actor
     public void act(){
         move(velocidad);
         
-        virus = getOneIntersectingObject(Virus.class);
+        virus = getOneObjectAtOffset(0,0,Virus.class);
         if (virus != null)
         {
             World world;
