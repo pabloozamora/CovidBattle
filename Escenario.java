@@ -57,6 +57,12 @@ public class Escenario extends World
         return vidas;
     }
     
+    public void sumarVida(){
+        if (contadorVidas < 3){
+            contadorVidas += 1;
+        }
+    }
+    
     public void quitarVida()
     {
         contadorVidas -= 1;
@@ -81,6 +87,16 @@ public class Escenario extends World
     public void nuevoVirus(){
         Virus virus = new Virus();
         addObject(virus,Greenfoot.getRandomNumber(600),Greenfoot.getRandomNumber(400));
+    }
+    
+    public void aparecerMascarilla(){
+        Mascarilla mascarilla = new Mascarilla();
+        addObject(mascarilla,Greenfoot.getRandomNumber(600),Greenfoot.getRandomNumber(400));
+    }
+    
+    public void aparecerAlcohol(){
+        Alcohol alcohol = new Alcohol();
+        addObject(alcohol,Greenfoot.getRandomNumber(600),Greenfoot.getRandomNumber(400));
     }
 }
     

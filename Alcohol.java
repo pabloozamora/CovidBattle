@@ -1,17 +1,25 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Mascarilla here.
+ * Write a description of class Alcohol here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Mascarilla extends Actor
+public class Alcohol extends Actor
 {
     private Actor jugador;
     private int tiempoAnimacion = 0;
+    
+    public Alcohol(){
+        GreenfootImage imagenAlcohol = new GreenfootImage("alcohol.png");
+        int nuevaAltura = imagenAlcohol.getHeight()/5;
+        int nuevoAncho = imagenAlcohol.getWidth()/5;
+        imagenAlcohol.scale(nuevaAltura, nuevoAncho);
+        setImage(imagenAlcohol);
+    }
     /**
-     * Act - do whatever the Mascarilla wants to do. This method is called whenever
+     * Act - do whatever the Alcohol wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act()
@@ -29,12 +37,12 @@ public class Mascarilla extends Actor
         if (jugador != null)
         {
             Escenario escenario = (Escenario) getWorld();
-            escenario.sumarVida();
+            Contador contador = escenario.getContador();
+            contador.sumarPuntos(5);
             World world;
             world = getWorld();
             world.removeObject(this);
             return;
         }
-        }
-    
+    }
 }

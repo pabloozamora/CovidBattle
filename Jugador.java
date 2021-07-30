@@ -18,6 +18,8 @@ public class Jugador extends Actor
     private int direccion;
     private int tiempoEspera = 0;
     private int tiempoNuevoVirus = 0;
+    //private int tiempoNuevaMascarilla = 0;
+    private int nuevoExtra;
     int nuevaAltura = frente.getHeight()/5;
     int nuevoAncho = frente.getWidth()/5;
     private Actor virus;
@@ -49,6 +51,18 @@ public class Jugador extends Actor
             escenario.nuevoVirus();
             tiempoNuevoVirus = 200;
         }
+        nuevoExtra = Greenfoot.getRandomNumber(10000);
+        if(nuevoExtra == 5){
+            Escenario escenario = (Escenario) getWorld();
+            escenario.aparecerMascarilla();
+            nuevoExtra = 0;
+        }
+        else if (nuevoExtra == 10){
+            Escenario escenario = (Escenario) getWorld();
+            escenario.aparecerMascarilla();
+            nuevoExtra = 0;
+        }
+        
     }
     
     
