@@ -1,12 +1,14 @@
-------------------------------------------------------------------------
-This is the project README file. Here, you should describe your project.
-Tell the reader (someone who does not know anything about this project)
-all they need to know. The comments should usually include at least:
-------------------------------------------------------------------------
 
-PROJECT TITLE:
-PURPOSE OF PROJECT:
-VERSION or DATE:
-HOW TO START THIS PROJECT:
-AUTHORS:
-USER INSTRUCTIONS:
+Proyecto: "Covid Battle"
+Proyecto #! del Curso Programación Orientada a Objetos
+Versión Final
+Autor: Pablo Andrés Zamora Vásquez - Carné 21780
+
+El videojuego en cuestión fue realizado para brindar una perspectiva más 
+positiva sobre la situación causada por el COVID - 19.
+El jugador debe moverse con las teclas de dirección del teclado
+y disparar proyectiles con la barra espaciadora para golpear a la mayor
+cantidad de enemigos (virus) sin ser golpeado.
+Posee tres vidas y debe obtener la mayor cantidad de puntos antes de
+perderlas todas. También dispone de ayudas que aparecen aleatoriamente
+en el escenario.

@@ -11,7 +11,7 @@ public class Inicio extends Actor
     private GreenfootImage botonInicio = new GreenfootImage("startgame.png");
     private int nuevaAltura = botonInicio.getHeight()/4;
     private int nuevoAncho = botonInicio.getWidth()/4;
-    static GreenfootSound pantallaInicio = new GreenfootSound("startscreen.wav");
+    static GreenfootSound pantallaInicio = new GreenfootSound("startscreen.mp3");
     public Inicio(){
         //botonInicio.scale(nuevaAltura, nuevoAncho);
         setImage(botonInicio);
@@ -23,7 +23,7 @@ public class Inicio extends Actor
     public void act()
     {
         pantallaInicio.setVolume(30);
-        pantallaInicio.playLoop();
+        pantallaInicio.play();
         if (Greenfoot.mouseClicked(this)){
             pantallaInicio.stop();
             Escenario escenario = (Escenario) getWorld();
